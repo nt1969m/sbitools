@@ -1,12 +1,18 @@
 Package: sbitools
 Type: Package
-Title: What the Package Does (Title Case)
+Title: sbitools
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
+Authors@R: person("Naohito","Takahashi",role= c("aut","cre"),email="nt1969m@gmail.com")
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+License: MIT + file LICENSE
+URL: https://qiita.com/nt1969m/items/69ea8d0957c1fca7763f
+Imports: 
+  utils,pdftools,usethis
 Encoding: UTF-8
+Depends:
+  R (>= 2.10)
 LazyData: true
 RoxygenNote: 7.1.0
+Suggests: 
+    testthat
