@@ -5,7 +5,7 @@
 #'
 #' @export
 #' @param d file path not raw vector with pdf data
-#' @param s row of specCFD
+#' @param s row of specCFD 1:default(current version)
 #' @name sbitools
 
 # #' @examples # Just a random pdf file
@@ -19,7 +19,12 @@ CFD <- function( d ,s=1 ) {
     #  specCFD <- data(specCFD,package="sbitools")
     #  specCFD <-
     #  load("./inst/extdata/specCFD.Rda")
-  load( file.path( d,"specCFD.Rda" ) )
+  # default(current version)
+  #   # de facto standard :事実上の標準
+  specCFD <- specCFD.init()
+  # Custom order  :特注
+  datapath <- file.path( d,"specCFD.Rda" )
+  if(file.exists(datapath))    load( datapath )
   print( specCFD )
     #  print.data.frame( specCFD )
 
