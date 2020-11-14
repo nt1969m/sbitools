@@ -2,7 +2,7 @@ library(testthat)
 library(sbitools)
 
 # file path
-d <- file.path( "./inst/extdata" )
+d <- file.path( "./inst/extdata/CFD" )
 
 # テストデータに含まれる個人情報を
 # マスキングした為、
