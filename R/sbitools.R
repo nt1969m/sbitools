@@ -8,5 +8,6 @@
 #' @importFrom utils write.csv
 #' @importFrom pdftools pdf_info
 #' @importFrom pdftools pdf_data
+#' @importFrom stringi stri_trans_nfkc
 #' @importFrom usethis use_data
 NULL
