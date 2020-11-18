@@ -1,13 +1,12 @@
 # convert many pdf to csv
 #' CFD
 #'
-#' 複数の(.pdf)を(.csv)に変換する。
+#' 証拠金入出金明細書(.pdf)を(.csv)に変換する。
 #'
 #' @export
 #' @param d file path not raw vector with pdf data
 #' @param s row of specCFD 1:default(current version)
-#' @name sbitools
-
+# #' @name sbitools
 # #' @examples # Just a random pdf file
 # #'  csv <- CFD( pdf_file_path )
 CFD <- function( d ,s=1 ) {

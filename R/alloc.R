@@ -1,12 +1,12 @@
 # convert many pdf to csv
 #' As
 #'
-#' 複数の(.pdf)を(.csv)に変換する。
+#' 割当株式等(.pdf)を(.csv)に変換する。
 #'
 #' @export
 #' @param d file path not raw vector with pdf data
 # #' @param s row of specCFD 1:default(current version)
-#' @name sbitools
+# #' @name sbitools
 # #' @family sbitools
 # #' @examples # Just a random pdf file
 # #' d <- file.path( "./inst/extdata/As" )
