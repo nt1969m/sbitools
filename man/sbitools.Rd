@@ -28,9 +28,9 @@ As(d)
 \description{
 説明
 
-複数の(.pdf)を(.csv)に変換する。
+証拠金入出金明細書(.pdf)を(.csv)に変換する。
 
-複数の(.pdf)を(.csv)に変換する。
+割当株式等(.pdf)を(.csv)に変換する。
 
 Put csv from pdf
 }
