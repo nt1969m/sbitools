@@ -7,7 +7,7 @@ Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 License: MIT + file LICENSE
 URL: https://qiita.com/nt1969m/items/69ea8d0957c1fca7763f (CFD)
- https://qiita.com/nt1969m/items/890846d529d08c8edbb2 (alloc)
+ https://qiita.com/nt1969m/items/890846d529d08c8edbb2 (As)
 Imports: 
   utils,pdftools,usethis,stringi
 Encoding: UTF-8

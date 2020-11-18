@@ -1,4 +1,5 @@
 # convert many pdf to csv
+#' As
 #'
 #' 複数の(.pdf)を(.csv)に変換する。
 #'

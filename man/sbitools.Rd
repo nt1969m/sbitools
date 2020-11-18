@@ -30,12 +30,7 @@ As(d)
 
 複数の(.pdf)を(.csv)に変換する。
 
+複数の(.pdf)を(.csv)に変換する。
+
 Put csv from pdf
 }
-\examples{
-# Just a random pdf file
-d <- file.path( "./inst/extdata/As" )
-As(d)
-
-}
-\concept{sbitools}
