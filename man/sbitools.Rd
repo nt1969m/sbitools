@@ -32,3 +32,10 @@ As(d)
 
 Put csv from pdf
 }
+\examples{
+# Just a random pdf file
+d <- file.path( "./inst/extdata/As" )
+As(d)
+
+}
+\concept{sbitools}
