@@ -6,7 +6,7 @@
 #' @param d file path not raw vector with pdf data
 # #' @param s row of specCFD 1:default(current version)
 #' @name sbitools
-#' @family sbitools
+# #' @family sbitools
 # #' @examples # Just a random pdf file
 # #' d <- file.path( "./inst/extdata/As" )
 # #' As(d)

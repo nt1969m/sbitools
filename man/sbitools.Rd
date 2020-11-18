@@ -32,4 +32,3 @@ As(d)
 
 Put csv from pdf
 }
-\concept{sbitools}
