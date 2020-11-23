@@ -3,6 +3,7 @@
 export(As)
 export(CFD)
 export(CFD.pdf)
+export(Div)
 importFrom(pdftools,pdf_data)
 importFrom(pdftools,pdf_info)
 importFrom(stringi,stri_trans_nfkc)

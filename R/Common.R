@@ -18,7 +18,8 @@ ymd <- function( ve ) {
   #d	<-	grep(		"日"	,ve		)
   d	<-	grep(		"\u65e5"	,ve		)
   if( length( d ) != 1 )	return( ve )						# ベクトルの要素が「１」である事
-  #cat(stringi::stri_escape_unicode("年")) \u5e74
+# # 以下余白ではない場合
+    #cat(stringi::stri_escape_unicode("年")) \u5e74
   # y	<-	grep(		"年"	,ve		)
   y	<-	grep(		"\u5e74"	,ve		)
   switch(	d
@@ -31,4 +32,14 @@ ymd <- function( ve ) {
           ,	"2"	= paste0( ve[1]	,ve[ d ]		)				# (年)月日 or (年月)日
           ,	"3"	= paste0( ve[1]	,ve[2]		,ve[ d ]		)	# (年)(月)(日)
   )
+  #paste(ve[1:d] ,collapse = "" )
+}
+h.ymd <- function( ve ) {
+  #cat(stringi::stri_escape_unicode("年月日"))　\u5e74\u6708\u65e5
+  # as.Date( ve ,format="%Y年%m月%d日")
+  as.Date( ve ,format="%Y\u5e74%m\u6708%d\u65e5" )
+}
+# 数字の対処（カンマ削除）
+comma <- function( ve ) {
+  as.integer( gsub( "," ,"" ,ve ) )
 }

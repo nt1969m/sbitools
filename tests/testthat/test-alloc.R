@@ -7,7 +7,7 @@ test_that("alloc.init", {
 test_that("alloc.pdf", {
   #alloc.pdf()
 })
-test_that("alloc", {
+test_that("As", {
   # file path
   dir.create( "./inst",showWarnings = FALSE )
   dir.create( "./inst/extdata",showWarnings = FALSE )
