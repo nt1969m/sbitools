@@ -1,15 +1,15 @@
 # y抽出
 yn <- function( df ,n )	{
-  # n:明細行の"y"
+    # n:明細行の"y"
   x <- paste0( df
                [ df$"y" == n	,	]$"x"	)
   x <- as.integer( x )
-  #	print( x )	#Debug
+    #	print( x )	#Debug
   o <- order( c( x ) )
-  #	print( o )	#Debug
+    #	print( o )	#Debug
   t <- paste0( df
                [ df$"y" == n	,	]$"text"	)
-  #	print( t )	#Debug
+    #	print( t )	#Debug
   return( t[ o ] )
 }
 # 日付の対処

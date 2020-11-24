@@ -1,3 +1,29 @@
+# pdf to csv
+#' CFD.pdf
+#'
+#' 説明
+#'
+# #' @export
+# #' @param specCFD settings
+#' @param df pdf_data
+#' @param p pages
+# #' @param p pages
+# #' @param s row of specCFD
+# #' @name sbitools
+alloc.pdf <- function( df ,p ) {
+  # 入力
+  #  Pages	<- pdf_info( f )$pages	# 総ページ数
+  #  df	<-	pdf_data( f )
+  # 出力
+  mei	<- alloc.init()
+  for( i in 1:p ) {
+    df_p <- df[[i]][c(3,4,6)]
+    #df_p[,"x"] <- as.integer( df_p[,"x"] )
+
+    mei[ i , ] <-	c( upper( df_p ) ,lower( df_p ) )
+  }
+  return( mei )
+}
 # 上段
 upper <- function( df ) {
   y1 <- yn( df ,126 )
@@ -40,7 +66,8 @@ alloc.han <-  function(  mei ) {
     #han[ ,"権利割当日"]			<-	as.Date( han[ ,"権利割当日"	]		,format="%Y年%m月%d日")
     #cat(stringi::stri_escape_unicode("年月日"))　\u5e74\u6708\u65e5
     # han[ ,4]			<-	as.Date( han[ ,4	]		,format="%Y年%m月%d日")
-  han[  ,4]  <-  as.Date(  han[ ,4  ] ,format="%Y\u5e74%m\u6708%d\u65e5")
+  #han[  ,4]  <-  as.Date(  han[ ,4  ] ,format="%Y\u5e74%m\u6708%d\u65e5")
+  han[ ,4] <- h.ymd( han[ ,4 ] )
   return( han )
 }
 
