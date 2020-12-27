@@ -47,7 +47,8 @@ CFD.pdf <- function( specCFD ,df ,p ,s=1) {
     if( nrow( c ) == 7 ) {
       colnames( csv ) <- c[,"text"]
     }
-    m <- df_p[ y > h2[,"y"] , ]
+#bug    m <- df_p[ y > h2[,"y"] , ]
+    m <- df_p[ y > as.integer(h2[,"y"]) , ]
 #    r <- subset( m, m[ ,"x"] == specCFD[s,3] )
     r <- subset( m, m[ ,"x"] == c_x1 )
     # 		print( r )

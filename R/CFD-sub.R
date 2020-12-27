@@ -11,6 +11,11 @@ CFD.line <- function( m ,r ,x4=488 ) {
     csv[ j ,1 ] <- r[ j,"text"]
       #
     l <- subset( m ,m[ ,"y" ]==r[ j , "y" ] )
+    # v0.3.2 add sta
+      x <- as.integer( l[,"x"] )
+      o <- order( c( x ) )
+      l <- l[ o , ]
+    # v0.3.2 add end
     csv[ j ,2 ] <- l[ 2,"text"]
       #
     if( as.integer( l[ 3,"x"] ) <= x4 ) {
