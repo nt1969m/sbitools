@@ -1,7 +1,7 @@
 # convert many pdf to csv
 #' CFD
 #'
-#' 証拠金入出金明細書(.pdf)を(.csv)に変換する。
+# #' 証拠金入出金明細書(.pdf)を(.csv)に変換する。
 #'
 #' @export
 #' @param d file path not raw vector with pdf data

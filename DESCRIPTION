@@ -1,20 +1,21 @@
 Package: sbitools
 Type: Package
 Title: sbitools
-Version: 0.3.2
+Version: 0.3.3
 Authors@R: person("Naohito","Takahashi",role= c("aut","cre"),email="nt1969m@gmail.com")
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 License: MIT + file LICENSE
 URL: https://qiita.com/nt1969m/items/69ea8d0957c1fca7763f (CFD)
- https://qiita.com/nt1969m/items/890846d529d08c8edbb2 (As Allocated sharesの略のつもり)
- https://qiita.com/nt1969m/items/8e9d6f3454c2087bf6ec (Div配当金)
+     https://qiita.com/nt1969m/items/890846d529d08c8edbb2 (As Allocated sharesの略のつもり)
+     https://qiita.com/nt1969m/items/8e9d6f3454c2087bf6ec (Div配当金)
+# Roxygen: list(markdown = F)
 Imports: 
   utils,pdftools,usethis,stringi
 Encoding: UTF-8
 Depends:
   R (>= 2.10)
 LazyData: true
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 Suggests: 
     testthat

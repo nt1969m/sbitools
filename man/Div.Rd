@@ -10,5 +10,5 @@ Div(d)
 \item{d}{file path not raw vector with pdf data}
 }
 \description{
-株式等配当金(.pdf)を(.csv)に変換する。
+Div
 }

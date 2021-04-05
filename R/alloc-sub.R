@@ -1,12 +1,12 @@
 # pdf to csv
-#' CFD.pdf
-#'
-#' 説明
-#'
+# # ' CFD.pdf
+# #'
+# #' 説明
+# #'
 # #' @export
 # #' @param specCFD settings
-#' @param df pdf_data
-#' @param p pages
+# # ' @param df pdf_data
+# # ' @param p pages
 # #' @param p pages
 # #' @param s row of specCFD
 # #' @name sbitools

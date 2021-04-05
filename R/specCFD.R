@@ -3,12 +3,12 @@
 #' A dataset of spec of pdf files in CFD.
 #'
 #' @format A data frame with 1or2 rows and 4 variables:
-#' \describe{
-#'   \item{h1}{証拠金入出金明細書}
-#'   \item{h2}{受渡日}
-#'   \item{x1}{position of 受渡日}
-#'   \item{x4}{end position of 証拠金の減少（円）}
-#' }
+# #' \describe{
+# #'   \item{h1}{証拠金入出金明細書}
+# #'   \item{h2}{受渡日}
+# #'   \item{x1}{position of 受渡日}
+# #'   \item{x4}{end position of 証拠金の減少（円）}
+# #' }
 #' @docType data
 #'
 # #' @usage data(specCFD)

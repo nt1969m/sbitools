@@ -12,5 +12,5 @@ CFD(d, s = 1)
 \item{s}{row of specCFD 1:default(current version)}
 }
 \description{
-証拠金入出金明細書(.pdf)を(.csv)に変換する。
+CFD
 }

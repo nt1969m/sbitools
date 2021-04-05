@@ -1,8 +1,8 @@
 # initialize DataFrame
-#' CFDinit
-#'
-#'
-#' @param n 1:証拠金入出金明細書
+# #' CFDinit
+# #'
+# #'
+# #' @param n \1:証拠金入出金明細書
 CFD.init <- function( n=1 ) {
   # 列数
   csv <- data.frame( matrix( NA ,0 ,7 ) )

@@ -18,7 +18,5 @@ CFD.pdf(specCFD, df, p, s = 1)
 \item{s}{row of specCFD}
 }
 \description{
-説明
-
 Put csv from pdf
 }

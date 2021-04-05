@@ -1,7 +1,7 @@
 # pdf to csv
 #' CFD.pdf
 #'
-#' 説明
+# #' 説明
 #'
 # #' @export
 # #' @param specCFD settings

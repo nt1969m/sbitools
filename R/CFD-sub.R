@@ -1,10 +1,10 @@
 # line of pdf to csv
-#' CFDpdf
+# #' CFDpdf
 #'
 #'
-#' @param m DataFrame
-#' @param r nrow
-#' @param x4 減少の最大の横位置
+# #' @param m DataFrame
+# #' @param r nrow
+# #' @param x4 pos  \減少の最大の横位置
 CFD.line <- function( m ,r ,x4=488 ) {
   csv <- CFD.init()
   for( j in 1:nrow( r ) ) {
@@ -23,14 +23,16 @@ CFD.line <- function( m ,r ,x4=488 ) {
     } else {
       csv[ j ,5 ] <- l[ 3,"text"]
     }
-      #
-    csv[ j ,6 ] <- l[ 4,"text"]
-      # 想定外かも？
-    switch( ( nrow( l ) - 4 )
-            ,"1" = {
-              print( l )
-            }
-    )
+# v0.3.3 del sta
+          # 2021-01-31 列：証拠金の残高(円)、廃止となった
+#   csv[ j ,6 ] <- l[ 4,"text"]
+    # 想定外かも？
+#    switch( ( nrow( l ) - 4 )
+#            ,"1" = {
+#              print( l )
+#            }
+#    )
+# v0.3.3 del end
   }
   return( csv )
 }

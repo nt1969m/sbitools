@@ -1,7 +1,7 @@
 # pdf to csv
 #' CFD.pdf
 #'
-#' 説明
+# #' 説明
 #'
 #' @export
 #' @param specCFD settings
@@ -51,6 +51,11 @@ CFD.pdf <- function( specCFD ,df ,p ,s=1) {
     m <- df_p[ y > as.integer(h2[,"y"]) , ]
 #    r <- subset( m, m[ ,"x"] == specCFD[s,3] )
     r <- subset( m, m[ ,"x"] == c_x1 )
+# v0.3.3 add sta
+    if ( nrow( r ) == 0 ) {
+      r <- subset( m, m[ ,"x"] == 18 ) # from 2021-01-31
+    }
+# v0.3.3 add end
     # 		print( r )
 #    l <- CFD.line( m ,r ,specCFD[s,4])
     l <- CFD.line( m ,r ,c_x4)

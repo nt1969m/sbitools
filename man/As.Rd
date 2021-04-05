@@ -10,5 +10,5 @@ As(d)
 \item{d}{file path not raw vector with pdf data}
 }
 \description{
-割当株式等(.pdf)を(.csv)に変換する。
+As
 }

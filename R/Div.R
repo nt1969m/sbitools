@@ -1,7 +1,7 @@
 # convert many pdf to csv
 #' Div
 #'
-#' 株式等配当金(.pdf)を(.csv)に変換する。
+# #' 株式等配当金(.pdf)を(.csv)に変換する。
 #'
 #' @export
 #' @param d file path not raw vector with pdf data
