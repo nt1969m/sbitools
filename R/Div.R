@@ -31,8 +31,37 @@ Div <- function( d ) {
 #  f <- file.path( d ,paste0( specCFD[s,1] ,".csv" ) )
   #cat(stringi::stri_escape_unicode("株式等配当金")) \u682a\u5f0f\u7b49\u914d\u5f53\u91d1
   f <- file.path( d ,"\u682a\u5f0f\u7b49\u914d\u5f53\u91d1.csv" )
-  write.csv( csv ,file=f )
+#  write.csv( csv ,file=f )
+  write.csv( csv ,file=f ,row.names = FALSE) # 2023-08-16 changed
   print( f )
+  message( paste0( "# sum( col.06 " ,colnames( csv[6] ),    "  ) = "
+                  ,format( sum( csv[,6] ) # 配当金額
+                          ,big.mark=","
+                          ,width=15
+                          ,scientific=F )
+                 )
+  )
+  message( paste0( "# sum( col.07 " ,colnames( csv[7] ),  "    ) = "
+                   ,format( sum( csv[,7] ) # 所得税
+                            ,big.mark=","
+                            ,width=15
+                            ,scientific=F )
+                 )
+  )
+  message( paste0( "# sum( col.08 " ,colnames( csv[8] ),  "    ) = "
+                   ,format( sum( csv[,8] ) # 地法税
+                            ,big.mark=","
+                            ,width=15
+                            ,scientific=F )
+                   )
+  )
+  message( paste0( "# sum( col.10 " ,colnames( csv[10] ),  " ) = "
+                   ,format( sum( csv[,10] ) # お受取金額
+                            ,big.mark=","
+                            ,width=15
+                            ,scientific=F )
+                   )
+  )
 
   return( csv )
 }
