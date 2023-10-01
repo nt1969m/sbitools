@@ -27,6 +27,11 @@ As <- function( d ) {
     stack		<-	rbind( stack ,mei )
   }
   csv <- alloc.han(stack)
+  #2023-10-01 add sta
+  csv[ ,7]  <- comma( csv[ ,7] )  #c7 "お預り数量(株)"
+  csv[ ,8]  <- comma( csv[ ,8] )  #c8 "割当数量(株)"
+  csv[ ,9]  <- comma( csv[ ,9] )  #c9 "合計数量(株)"
+  #2023-10-01 add end
   #  f <- file.path( d ,"割当株式等.csv" )
 #  f <- file.path( d ,paste0( specCFD[s,1] ,".csv" ) )
   #cat(stri_escape_unicode("割当株式等")) \u5272\u5f53\u682a\u5f0f\u7b49
