@@ -50,7 +50,7 @@ CFD <- function( d ,s=1 ) {
 
 #  f <- file.path( d ,"証拠金入出金明細書.txt" )
   f <- file.path( d ,paste0( specCFD[s,1] ,".csv" ) )
-  write.csv( csv ,file=f )
+  write.csv( csv ,file=f ,row.names = F ) #2023-10-01 row.names
   print( f )
 
 return( csv )

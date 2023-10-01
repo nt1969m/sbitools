@@ -1,7 +1,7 @@
 Package: sbitools
 Type: Package
 Title: sbitools
-Version: 0.3.4
+Version: 0.3.4.3
 Authors@R: person("Naohito","Takahashi",role= c("aut","cre"),email="nt1969m@gmail.com")
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.

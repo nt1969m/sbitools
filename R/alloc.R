@@ -31,7 +31,7 @@ As <- function( d ) {
 #  f <- file.path( d ,paste0( specCFD[s,1] ,".csv" ) )
   #cat(stri_escape_unicode("割当株式等")) \u5272\u5f53\u682a\u5f0f\u7b49
   f <- file.path( d ,"\u5272\u5f53\u682a\u5f0f\u7b49.csv" )
-  write.csv( csv ,file=f )
+  write.csv( csv ,file=f ,row.names = FALSE ) # 2023-10-01 row.names
   print( f )
 
   return( csv )
