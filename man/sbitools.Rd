@@ -2,6 +2,7 @@
 % Please edit documentation in R/CFD-pdf.R, R/sbitools.R
 \docType{package}
 \name{sbitools}
+\alias{sbitools-package}
 \alias{sbitools}
 \alias{CFD.pdf}
 \title{CFD.pdf}
@@ -19,4 +20,15 @@ CFD.pdf(specCFD, df, p, s = 1)
 }
 \description{
 Put csv from pdf
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://qiita.com/nt1969m/items/69ea8d0957c1fca7763f (CFD) https://qiita.com/nt1969m/items/890846d529d08c8edbb2 (As Allocated sharesの略のつもり) https://qiita.com/nt1969m/items/8e9d6f3454c2087bf6ec (Div配当金)}
+}
+
+}
+\author{
+\strong{Maintainer}: Naohito Takahashi \email{nt1969m@gmail.com}
+
 }
