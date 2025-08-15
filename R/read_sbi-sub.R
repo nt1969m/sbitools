@@ -8,6 +8,12 @@ sbi_init	<- function(inf_i)	{
 }
 
 # y抽出
+#' @export
+#' @param df_p pdf_data[[n]]
+#' @param n    pdf_data[[n]]$"y"
+#' @param s    pdf_data[[n]]$"x" Starting position
+#' @param e    pdf_data[[n]]$"x" End position
+#' @name sbitools
 ynx <- function( df_p ,n ,s=0 ,e=Inf)	{
   if(s |> is.na() ) s <- 0
   if(e |> is.na() ) e <- Inf
