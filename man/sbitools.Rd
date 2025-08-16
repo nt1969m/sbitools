@@ -33,7 +33,7 @@ Put csv from pdf
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://qiita.com/nt1969m/items/69ea8d0957c1fca7763f (CFD) https://qiita.com/nt1969m/items/890846d529d08c8edbb2 (As Allocated sharesの略のつもり) https://qiita.com/nt1969m/items/8e9d6f3454c2087bf6ec (Div配当金)}
+  \item \url{https://qiita.com/nt1969m/items/69ea8d0957c1fca7763f (CFD) https://qiita.com/nt1969m/items/890846d529d08c8edbb2 (As Allocated sharesの略のつもり) https://qiita.com/nt1969m/items/8e9d6f3454c2087bf6ec (Div配当金) https://qiita.com/nt1969m/items/896d7af7582f85d13dd8 (read_sbi)}
 }
 
 }
