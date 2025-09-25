@@ -4,7 +4,7 @@
 \alias{CFD}
 \title{CFD}
 \usage{
-CFD(d, s = 1)
+CFD(d = ".", s = 1)
 }
 \arguments{
 \item{d}{file path not raw vector with pdf data}

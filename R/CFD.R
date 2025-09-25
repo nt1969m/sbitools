@@ -9,7 +9,8 @@
 # #' @name sbitools
 # #' @examples # Just a random pdf file
 # #'  csv <- CFD( pdf_file_path )
-CFD <- function( d ,s=1 ) {
+CFD <- function( d="." ,s=1 ) {
+  #CFD <- function( d ,s=1 ) { # 2025-09-25
 
   print( d )
 
@@ -51,7 +52,19 @@ CFD <- function( d ,s=1 ) {
 #  f <- file.path( d ,"証拠金入出金明細書.txt" )
   f <- file.path( d ,paste0( specCFD[s,1] ,".csv" ) )
   write.csv( csv ,file=f ,row.names = F ) #2023-10-01 row.names
-  print( f )
-
-return( csv )
+  # print( f ) # 2025-09-25 del
+# 2025-09-25 add sta
+  message( "write " ,f  )
+  #
+  tb <- aggregate( csv[4:5],by = list(csv[,2]),FUN=sum,na.rm=T)
+  dif <- tb[,3] - tb[,2]
+  tb <- cbind( tb ,dif )
+  tb |> print()
+  message( "sum = " ,tb$dif |> sum() )
+  f <- "C_002_sum.csv"
+  tb |> write.table( f ,row.names = F )
+  message( "write " ,f  )
+  return( tb )
+  # 2025-09-25 add end
+#return( csv ) # 2025-09-25 del
 }
