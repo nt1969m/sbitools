@@ -30,7 +30,7 @@ read_sbi <- function( d=getwd(),f=".pdf$",p="",t="" ) {
   "p2: f=" |> message( "\"" ,f ,"\"" )
   files <- dir(	d ,pattern = f ,ignore.case=T )
   if( files |> length() == 0 ) return(NULL)
-  data <- files[1] |> pdf_data()
+  data <- files[1] |> pdftools::pdf_data()
   df <- data[[1]]
 
   if( p == "" ) {

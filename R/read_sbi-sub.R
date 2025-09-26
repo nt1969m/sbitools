@@ -13,13 +13,18 @@ sbi_init	<- function(inf_i)	{
 #' @param n    pdf_data[[n]]$"y"
 #' @param s    pdf_data[[n]]$"x" Starting position
 #' @param e    pdf_data[[n]]$"x" End position
+#' @param ye   pdf_data[[n]]$"y" End position
 #' @name sbitools
-ynx <- function( df_p ,n ,s=0 ,e=Inf)	{
-  if(s |> is.na() ) s <- 0
-  if(e |> is.na() ) e <- Inf
-  x_text <- subset(df_p,y==n & x>=s & x<e,select = c(x,text))
+ynx <- function( df_p ,n ,s=0 ,e=Inf ,ye=0)	{
+#  if(s |> is.na() ) s <- 0
+#  if(e |> is.na() ) e <- Inf
+  if( ye == 0 ) ye <- n
+#  x_text <- subset(df_p,y==n & x>=s & x<e,select = c(x,text))
+   x_text <- subset( df_p ,y>=n & y<=ye & x>=s & x<e
+                    ,select = c(y,x,text))
   if(x_text |> length() <= 1 ) return(x_text$text)
-  o <- x_text$x |> order()
+#  o <- x_text$x |> order()
+  o <- order( x_text$y ,x_text$x )
   t <- x_text$"text"[o] |>  paste0(collapse = "")
   return( t )
 }
@@ -51,18 +56,29 @@ sbi_row	<- function(df_p,inf_i,rows=1)	{
   mei <- sbi_init(inf_i)
   #  inf_i$cols |> print()
   if(rows == 1)
-    y <- inf_i$y |> strsplit(",")|> unlist() |> as.integer()
+    y <- inf_i$y |> strsplit(",")|> unlist()
   if(rows == 2)
-    y <- inf_i$y2 |> strsplit(",")|> unlist() |> as.integer()
-  #    y |> print()
+    y <- inf_i$y2 |> strsplit(",")|> unlist()
+  ye <- y
+  y  <- gsub( ":.*"  ,"" ,y  ) |> as.integer()
+  #     y |> print()
+  ye <- gsub( "^.*:" ,"" ,ye ) |> as.integer()
+  #     ye |> print()
 
-  s <- inf_i$s |> strsplit(",")|> unlist() |> as.integer()
-  #    s |> print()
+  s_col <- inf_i$s |> strsplit(",")|> unlist()
+  #     s_col |> print()
+  s <- gsub( ":.*"  ,"" ,s_col ) |> as.integer()
+  #     s |> print()
   e <- inf_i$e |> strsplit(",")|> unlist() |> as.integer()
-  #    e |> print()
+
+  if( grep( ":" ,inf_i$s ) |> length() != 0 ) {
+    e <- gsub( "^.*:" ,"" ,s_col ) |> as.integer()
+  }
+  # e |> print()
+
   for(j in 1:inf_i$cols){
     #    j |> print()
-    mei[1,j] <- ynx( df_p ,y[j] ,s[j] ,e[j] )
+    mei[1,j] <- ynx( df_p ,y[j] ,s[j] ,e[j] ,ye[j] )
   }
   return( mei )
 }

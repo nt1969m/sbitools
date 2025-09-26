@@ -10,7 +10,7 @@
 \usage{
 CFD.pdf(specCFD, df, p, s = 1)
 
-ynx(df_p, n, s = 0, e = Inf)
+ynx(df_p, n, s = 0, e = Inf, ye = 0)
 }
 \arguments{
 \item{specCFD}{settings}
@@ -26,6 +26,8 @@ ynx(df_p, n, s = 0, e = Inf)
 \item{n}{pdf_data[[n]]$"y"}
 
 \item{e}{pdf_data[[n]]$"x" End position}
+
+\item{ye}{pdf_data[[n]]$"y" End position}
 }
 \description{
 Put csv from pdf
