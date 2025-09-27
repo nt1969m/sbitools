@@ -71,9 +71,9 @@ sbi_row	<- function(df_p,inf_i,rows=1)	{
     # y <- inf_i$y |> strsplit(",")|> unlist()
     y <- y_col[[1]] |> strsplit(",")|> unlist()
   if(rows == 2) {
-    y <- inf_i$y2 |> strsplit(",")|> unlist()
-    if( y_col |> length() >= 2 )
-      y <- y_col[[2]] |> strsplit(",")|> unlist()
+    # y <- inf_i$y2 |> strsplit(",")|> unlist()
+    # if( y_col |> length() >= 2 )
+    y <- y_col[[2]] |> strsplit(",")|> unlist()
   }
   if(rows >= 3) {
     y <- y_col[[ rows ]] |> strsplit(",")|> unlist()
@@ -88,11 +88,11 @@ sbi_row	<- function(df_p,inf_i,rows=1)	{
   #     s_col |> print()
   s <- gsub( ":.*"  ,"" ,s_col ) |> as.integer()
   #     s |> print()
-  e <- inf_i$e |> strsplit(",")|> unlist() |> as.integer()
+  # e <- inf_i$e |> strsplit(",")|> unlist() |> as.integer()
 
-  if( grep( ":" ,inf_i$s ) |> length() != 0 ) {
+  # if( grep( ":" ,inf_i$s ) |> length() != 0 ) {
     e <- gsub( "^.*:" ,"" ,s_col ) |> as.integer()
-  }
+  # }
   # e |> print()
 
   for(j in 1:inf_i$cols){
