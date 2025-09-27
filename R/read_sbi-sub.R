@@ -41,11 +41,22 @@ sbi_pdf <- function( df ,p ,inf_i) {
     mei[1,]  <-	sbi_row(df_p,inf_i)
     sta <- sta |> rbind(mei)
 
-    # 下段
     if(inf_i$rows == 1) next
-    # "以下余白"
-    if(grep("\u4ee5\u4e0b\u4f59\u767d",df_p$text) |> length() > 0 ) next
+    # 中段
+    # "以下余白" Below margin
+    Bm <- "\u4ee5\u4e0b\u4f59\u767d"
+    Bm_l <- grep(Bm,df_p$text) |> length()
+    if( Bm_l > 0 & inf_i$rows == 2) next
     mei[1,]  <-	sbi_row(df_p,inf_i,rows=2)
+
+    # "以下余白" Below margin
+    if(grep( Bm ,mei ) |> length() > 0 ) next
+    sta <- sta |> rbind(mei)
+
+    if(inf_i$rows == 2) next
+    # 下段
+    mei[1,]  <-	sbi_row(df_p,inf_i,rows=3)
+    if(grep( Bm ,mei ) |> length() > 0 ) next
     sta <- sta |> rbind(mei)
   }
   return( sta )
@@ -55,10 +66,18 @@ sbi_row	<- function(df_p,inf_i,rows=1)	{
   #  inf_i |> print()
   mei <- sbi_init(inf_i)
   #  inf_i$cols |> print()
+  y_col <- inf_i$y |> strsplit(";")|> unlist()
   if(rows == 1)
-    y <- inf_i$y |> strsplit(",")|> unlist()
-  if(rows == 2)
+    # y <- inf_i$y |> strsplit(",")|> unlist()
+    y <- y_col[[1]] |> strsplit(",")|> unlist()
+  if(rows == 2) {
     y <- inf_i$y2 |> strsplit(",")|> unlist()
+    if( y_col |> length() >= 2 )
+      y <- y_col[[2]] |> strsplit(",")|> unlist()
+  }
+  if(rows >= 3) {
+    y <- y_col[[ rows ]] |> strsplit(",")|> unlist()
+  }
   ye <- y
   y  <- gsub( ":.*"  ,"" ,y  ) |> as.integer()
   #     y |> print()
